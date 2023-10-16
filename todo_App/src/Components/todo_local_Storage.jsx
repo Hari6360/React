@@ -1,5 +1,3 @@
-import React from "react";
-
 const todo_local_Storage = () => {
 	return <div>todo_local_Storage</div>;
 };
