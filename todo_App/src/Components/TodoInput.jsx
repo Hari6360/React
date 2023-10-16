@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-const TodoInput = ({ addTodo }) => {
+const TodoInput = ({ handleAdd }) => {
 	const [value, setValue] = useState("");
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (value) {
-			addTodo(value);
+			handleAdd(value);
 		} else {
 			setValue("");
 		}
@@ -30,6 +31,10 @@ const TodoInput = ({ addTodo }) => {
 			</form>
 		</div>
 	);
+};
+
+TodoInput.propTypes = {
+	handleAdd: PropTypes.func.isRequired,
 };
 
 export default TodoInput;
