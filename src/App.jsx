@@ -1,3 +1,7 @@
+/**
+ * A React component that generates a random password based on user preferences.
+ * @returns The Password Generator component.
+ */
 import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
