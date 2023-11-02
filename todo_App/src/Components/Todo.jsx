@@ -2,6 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TodoInput from "./TodoInput";
 import TodoItem from "./TodoItem";
+import todo_local_Storage from "./todo_local_Storage";
 
 const Todo = () => {
 	const [todos, setTodos] = useState([]);
@@ -31,9 +32,13 @@ const Todo = () => {
 			)
 		);
 	};
+	const ls = () => {
+		console.log(ls);
+	};
 	return (
 		<div>
 			<TodoInput handleAdd={addTodo} />
+			<todo_local_Storage ls={ls} />
 			<div>
 				{todos.map((todo) => (
 					<TodoItem
